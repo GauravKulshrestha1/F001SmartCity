@@ -1,10 +1,12 @@
 package com.smartcitywebadmin;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -94,6 +96,61 @@ public class AdminloginClass {
 		
 		
 	}
+	@Test(priority=5)
+	public void createcountry() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/aside/ul/li[3]/a")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("/html/body/main/div/div/div/div/div[1]/a")).click();
+		Thread.sleep(5000);
+		/*Here Check The Case of Text Box Null? */
+		WebElement Ele = driver.findElement(By.xpath("//*[@id=\"CountryName\"]"));
+		String Clob = Ele.getAttribute("value");
+		if(Clob.isEmpty()) {
+			System.out.println("Yes Text Box Is Clear");
+		}else {
+			System.out.println("No Text Box is not Clear");
+		}
+		Thread.sleep(5000);
+		/*Here Check The Case of Text Box Null? */
+		WebElement WB = driver.findElement(By.xpath("//*[@id=\"CountryName\"]"));
+		String WB1 = WB.getAttribute("placeholder");
+		if(WB1.equals("Please enter country name")){
+			System.out.println("Yes Valid Place Holder");
+		}else {
+			System.out.println("No Invalid Place Holder");
+		}
+		Thread.sleep(8000);
+		/* Here Insert The Values */
+		WebElement Wb = driver.findElement(By.xpath("//*[@id=\"CountryName\"]"));
+		Wb.sendKeys("America");
+		Thread.sleep(5000);
+		String txt = Wb.getAttribute("Value");
+		System.out.println(txt);
+		
+		/*Now Save this */
+		driver.findElement(By.xpath("//*[@id=\"btnsubmit\"]")).click();
+		Thread.sleep(5000);
+		System.out.println("Press submit button for Adding Country");		
+	}
+	@Test(priority=6)
+	public void DeleteCountry() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/aside/ul/li[3]/a")).click();
+		Thread.sleep(5000);
+		/* CHECK DATA INTO TABLE */
+		WebElement Table = driver.findElement(By.id("tblCountry"));
+		List<WebElement> allRows = Table.findElements(By.tagName("tr"));
+		for(WebElement row : allRows) {
+			List<WebElement> cells = row.findElements(By.tagName("td"));
+			for(WebElement cell : cells) {
+				System.out.println("Content >>" + cell.getText());
+			}
+		}
+		/*Delete */
+		driver.findElement(By.xpath("//*[@id=\"tblCountry\"]/tbody/tr[3]/td[2]/div/span/img")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/button[2]")).click();
+		Thread.sleep(3000);
+	}
 	
 	/*@Test
 	public void ErrorValidationmessage() {
@@ -106,7 +163,7 @@ public class AdminloginClass {
 				System.out.println("User Registration is Unsuccessful – Failed So Login Failed");
 				}
 	}*/
-	@Test(priority=5)
+	@Test(priority=7)
 	public void Logout_successfully() {
 		
 		driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]")).click();
@@ -166,10 +223,11 @@ public class AdminloginClass {
 		extent.flush();
 
 	}*/
+	
 
 	@AfterTest
 	public void terminateBrowser(){
-		//driver.close();
+		driver.close();
 		System.out.println("Browser is Down successfully");
 	}
 
