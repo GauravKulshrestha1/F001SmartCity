@@ -1,0 +1,18 @@
+pipeline{
+	agent any
+	tools{
+	maven "3.8.3"	
+	}
+	stages{
+	  stage('clean and install'){
+		steps{
+		bat 'mvn clean install'
+		}	
+	}
+	stage('package'){
+		step{
+			bat 'mvn package'
+		}		
+}
+	}
+}
