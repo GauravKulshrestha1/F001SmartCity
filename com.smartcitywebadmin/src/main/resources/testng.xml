@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.smartcitywebadmin.AdminloginClass"/>
+      <class name="com.smartcitywebadmin.AdminMangecountryPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

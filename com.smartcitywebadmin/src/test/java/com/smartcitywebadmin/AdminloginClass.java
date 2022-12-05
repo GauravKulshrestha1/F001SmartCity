@@ -169,7 +169,7 @@ public class AdminloginClass {
 
 	@AfterTest
 	public void terminateBrowser(){
-		driver.close();
+		//driver.close();
 		System.out.println("Browser is Down successfully");
 	}
 
