@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-05T06:48:52Z" name="Default suite" finished-at="2022-12-05T06:49:50Z" duration-ms="57634">
+    <groups>
+      <group name="Smoke">
+        <method signature="AdminloginClass.CheckPageURL()[pri:1, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" name="CheckPageURL" class="com.smartcitywebadmin.AdminloginClass"/>
+        <method signature="AdminloginClass.forgottpasswordLink()[pri:2, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" name="forgottpasswordLink" class="com.smartcitywebadmin.AdminloginClass"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2022-12-05T06:48:52Z" name="Default test" finished-at="2022-12-05T06:49:50Z" duration-ms="57634">
+      <class name="com.smartcitywebadmin.AdminloginClass">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:18:52Z" name="launchBrowser" finished-at="2022-12-05T12:19:21Z" duration-ms="28986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="CheckPageURL()[pri:1, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:21Z" name="CheckPageURL" description="Check URL" finished-at="2022-12-05T12:19:21Z" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckPageURL -->
+        <test-method signature="forgottpasswordLink()[pri:2, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:21Z" name="forgottpasswordLink" finished-at="2022-12-05T12:19:21Z" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgottpasswordLink -->
+        <test-method signature="InsertCredentials()[pri:3, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:21Z" name="InsertCredentials" finished-at="2022-12-05T12:19:23Z" duration-ms="1621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertCredentials -->
+        <test-method signature="ParkingDashboard()[pri:4, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:23Z" name="ParkingDashboard" finished-at="2022-12-05T12:19:33Z" duration-ms="10414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ParkingDashboard -->
+        <test-method signature="Logout_successfully()[pri:5, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:33Z" name="Logout_successfully" finished-at="2022-12-05T12:19:34Z" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout_successfully -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:com.smartcitywebadmin.AdminloginClass@1a6d8329]" started-at="2022-12-05T12:19:34Z" name="terminateBrowser" finished-at="2022-12-05T12:19:50Z" duration-ms="16306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+      </class> <!-- com.smartcitywebadmin.AdminloginClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
