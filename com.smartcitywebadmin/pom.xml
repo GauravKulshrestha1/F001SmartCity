@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>smart city Web automation site sample project</name>
   <description>smart city Web automation site sample project</description>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <properties>
 <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 
