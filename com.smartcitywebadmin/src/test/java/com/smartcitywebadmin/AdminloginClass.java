@@ -85,10 +85,10 @@ public class AdminloginClass {
 	public void ParkingDashboard() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.findElement(By.id("StartDate")).click();
-		System.out.println("Select Start Date Correctlyt");
+		System.out.println("Select Start Date Correctly.");
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id=\"EndDate\"]")).click();
-		System.out.println("Select Ebd Date Successfully");
+		System.out.println("Select End Date Successfully");
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		driver.findElement(By.xpath("//*[@id=\"dvDeliverBlock\"]/div/div/div[3]/div/button")).click();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
